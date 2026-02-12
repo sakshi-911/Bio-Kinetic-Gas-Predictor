@@ -52,6 +52,28 @@ Follow these steps to set up the project locally on your machine.
 git clone [https://github.com/sakshi-911/Bio-Kinetic-Gas-Predictor.git](https://github.com/sakshi-911/Bio-Kinetic-Gas-Predictor.git)
 cd Bio-Kinetic-Gas-Predictor
 
+# 1. Create a virtual environment
+python3 -m venv venv
+
+# 2. Activate the environment
+# On Mac/Linux:
+source venv/bin/activate
+# On Windows:
+# venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r backend/requirements.txt
+
+# 4. Generate the Synthetic Data
+python backend/generate_data.py
+# (Output: ✅ Success! Dataset saved...)
+
+# 5. Train the AI Models
+python backend/train_model.py
+# (Output: ✅ Saved H2S model... ✅ Saved Methane model...)
+
+# 6. Start the API Server
+uvicorn backend.main:app --reload
 
 cd frontend
 
