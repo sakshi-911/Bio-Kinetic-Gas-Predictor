@@ -11,7 +11,7 @@ app = FastAPI(title="Gas Prediction API", version="1.0")
 # This allows the Next.js frontend (http://localhost:3000) to talk to this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"], # Allow Frontend
+    allow_origins=["*"], # Allow Frontend
     allow_credentials=True,
     allow_methods=["*"], # Allow all methods (POST, GET, etc.)
     allow_headers=["*"],
