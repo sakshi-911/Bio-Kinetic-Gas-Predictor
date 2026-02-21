@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="min-h-screen relative font-sans text-emerald-50 py-12 px-4 sm:px-8 overflow-hidden bg-black">
       
-      {/* ================= NEW BIO-KINETIC BACKGROUND ANIMATION ================= */}
+      {/* ================= BIO-KINETIC BACKGROUND ANIMATION ================= */}
       <div className="fixed inset-0 z-0">
         {/* Deep base gradient */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-950 via-teal-950 to-black opacity-90"></div>
@@ -246,8 +246,25 @@ export default function Home() {
                       </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" stroke="#064e3b" vertical={false} opacity={0.5} />
-                    <XAxis dataKey="day" stroke="#059669" fontSize={12} tickMargin={10} tickLine={false} axisLine={false} fontAttributes={{fontWeight: 'bold'}} label={{ value: 'Days', position: 'insideBottomRight', offset: -5, fill: '#059669' }}/>
-                    <YAxis stroke="#059669" fontSize={12} tickMargin={10} tickLine={false} axisLine={false} fontAttributes={{fontWeight: 'bold'}} label={{ value: 'PPM', angle: -90, position: 'insideLeft', fill: '#059669' }} />
+                    <XAxis 
+                      dataKey="day" 
+                      stroke="#059669" 
+                      fontSize={12} 
+                      tickMargin={10} 
+                      tickLine={false} 
+                      axisLine={false} 
+                      // Fixed: Removed fontAttributes
+                      label={{ value: 'Days', position: 'insideBottomRight', offset: -5, fill: '#059669' }}
+                    />
+                    <YAxis 
+                      stroke="#059669" 
+                      fontSize={12} 
+                      tickMargin={10} 
+                      tickLine={false} 
+                      axisLine={false} 
+                      // Fixed: Removed fontAttributes
+                      label={{ value: 'PPM', angle: -90, position: 'insideLeft', fill: '#059669' }} 
+                    />
                     <Tooltip 
                       contentStyle={{ backgroundColor: '#022c22', border: '1px solid #059669', borderRadius: '16px', backdropFilter: 'blur(8px)', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
                       itemStyle={{ color: '#34d399', fontWeight: 'bold', fontSize: '16px' }}
