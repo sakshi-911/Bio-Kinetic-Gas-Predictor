@@ -10,17 +10,49 @@ body {
   color: var(--color-foreground);
 }
 
-/* Custom sleek scrollbar */
+/* ================= CUSTOM ANIMATIONS ================= */
+@keyframes drift {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(10%, 15%) rotate(5deg);
+  }
+  100% {
+    transform: translate(-5%, 20%) rotate(-5deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(200%) skewX(30deg);
+  }
+}
+/* ===================================================== */
+
+
+/* Custom sleek scrollbar (Green Theme) */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.5);
+  background: rgba(6, 78, 59, 0.3); /* Emerald-950ish */
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(59, 130, 246, 0.5);
+  background: rgba(16, 185, 129, 0.5); /* Emerald-500 */
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(59, 130, 246, 0.8);
+  background: rgba(16, 185, 129, 0.8);
 }
